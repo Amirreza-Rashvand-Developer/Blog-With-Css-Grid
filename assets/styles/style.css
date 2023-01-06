@@ -1,0 +1,402 @@
+/* ==== Colors ==== */
+:root {
+    --primary-color: #06b995;
+    --secondary-color: #5a6067;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+}
+
+
+/* ==== Config ==== */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 62.5% ==> 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-family: "Poppins-Regular";
+    background-color: var(--light-color);
+}
+
+
+/* ==== Reset ==== */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* ==== Components ==== */
+.category {
+    --nature-color: #2c2c54;
+    --animal-color: #ff793f;
+}
+
+.category-nature,
+.category-animal {
+    display: inline-block;
+    border-radius: 1.3rem;
+    padding: .5rem 1rem;
+    font-family: "Poppins-SemiBold";
+    color: var(--light-color);
+}
+
+.category-nature {
+    background-color: var(--nature-color);
+}
+
+.category-animal {
+    background-color: var(--animal-color);
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    width: 13rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    border: none;
+}
+
+
+/* ==== Start Header ==== */
+.header {
+    height: 80vh;
+    background-image: linear-gradient(rgba(25, 25, 25, .3), rgba(25, 25, 25, .3)), url("../images/showcase.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.header .container {
+    height: 100%;
+}
+
+.nav {
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+
+.nav__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100%;
+}
+
+.app-logo {
+    color: var(--light-color);
+    font-size: 2.5rem;
+    font-family: "Poppins-Bold";
+    display: flex;
+    align-items: center;
+}
+
+.app-logo__title {}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 100%;
+}
+
+.menu__item {
+    position: relative;
+    height: 100%;
+}
+
+.menu__link {
+    color: var(--light-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu__item::before {
+    top: 0;
+    left: 0;
+}
+
+.menu__item::before,
+.menu__item::after {
+    content: "";
+    position: absolute;
+    background-color: var(--light-color);
+    width: 0;
+    height: .3rem;
+    transition: .4s;
+}
+
+.menu__item::after {
+    bottom: 0;
+    right: 0;
+}
+
+.menu__item:hover::before {
+    width: 100%;
+}
+
+.menu__item:hover::after {
+    width: 100%;
+}
+
+
+.header-content {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60vh;
+    color: var(--light-color);
+}
+
+.header-content__wrapper {
+    height: 100%;
+}
+
+.header-content__category {
+    margin-bottom: 1rem;
+}
+
+.header-content__title {
+    font-size: 2.5rem;
+    font-family: "Poppins-Bold";
+}
+
+.header-content__text {
+    text-align: justify;
+    margin: 0 0 1.5rem 0;
+}
+
+.header-content__btn {
+    background-color: var(--primary-color);
+}
+
+/* ==== Finish Header ==== */
+
+
+/* ==== Start Main ==== */
+.main {}
+
+/* ==== Finish Main ==== */
+
+
+/* ==== Start Section Articles ==== */
+.articles {
+    margin-top: 10rem;
+}
+
+.articles__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.articles__title {
+    font-family: "Poppins-Bold";
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+
+.articles__link {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-family: "Poppins-SemiBold";
+}
+
+.articles__link:hover i {
+    transform: translateX(.5rem);
+}
+
+.articles__link i {
+    font-size: 2rem;
+    transition: .4s;
+}
+
+.articles-content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.articles-content .card:nth-of-type(2) {
+    background-color: var(--dark-color);
+    color: #ffffff;
+}
+
+.articles-content .card:first-child {
+    grid-column: 1 / span 2;
+}
+
+.articles-content .card:first-child,
+.articles-content .card:nth-of-type(7) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.articles-content .card:nth-of-type(7) {
+    grid-column: 2 / span 2;
+}
+
+.articles-content .card:nth-of-type(6) {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.articles-content div {}
+
+.card {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.card__img {}
+
+.card__category-name {}
+
+.card__title {
+    font-family: "Poppins-SemiBold";
+    margin: 1rem 0 .5rem 0;
+}
+
+.card__title-link {
+    color: var(--secondary-color);
+}
+
+.card__description {
+    text-align: justify;
+}
+
+/* ==== Finish Section Articles ==== */
+
+
+/* ==== Start Footer ==== */
+.footer {
+    background-color: var(--dark-color);
+    margin-top: 10rem;
+    padding: 5rem 0;
+}
+
+.footer-content {
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-content__newsletter {}
+
+.footer-title {
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.footer-description {}
+
+.footer-content__form {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.footer-content__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 3rem;
+    font-family: "Poppins-Regular";
+}
+
+.footer-content__btn {
+    margin-top: .5rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-family: "Poppins-SemiBold";
+}
+
+.footer-links {}
+
+.link-pages {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.link-pages__item {}
+
+.link-pages__link {
+    color: #ffff;
+    position: relative;
+    transition: .4s;
+}
+
+.link-pages__link:hover {
+    padding-left: 1.8rem;
+}
+
+.link-pages__link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: #ff793f;
+    width: 0;
+    height: .3rem;
+    transition: .4s;
+}
+
+.link-pages__link:hover::before {
+    width: 1.5rem;
+}
+
+.footer-subscribe {}
+
+.footer-title {}
+
+.footer-description {}
+
+.footer-subscribe__btn {
+    margin-top: .5rem;
+}
+
+.footer-copy-right {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #ffffff;
+    margin-top: 5rem;
+    padding: 2.5rem 0;
+}
+
+.footer-copy-right__name {}
+
+.footer-copy-right__logo {}
+
+/* ==== Finish Footer ==== */

@@ -1,0 +1,40 @@
+.main {
+    margin-top: 10rem;
+}
+
+.about {}
+
+.about__wrapper {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 4rem;
+}
+
+.about__content {
+    grid-row: 1 / span 3;
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.about__title {
+    font-family: "Poppins-Bold";
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about__description {
+    text-align: justify;
+}
+
+.about__subscribe {
+    grid-row: 1 / span 3;
+}
+
+.about__subscribe-title {
+    font-family: "Poppins-SemiBold";
+    font-family: 2rem;
+}
+
+.about__subscribe-description {
+    margin: 1rem 0 1.5rem 0;
+}
